@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Development Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Centered Navigation Bar -->
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#hero">About</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#favorites">Favorites</a></li>
+            <li><a href="#" class="open-sidebar">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Floating Toggle Button -->
+    <button class="floating-btn open-sidebar">💬 Feedback</button>
+
+    <!-- Hero Section (Split Layout) -->
+<!-- Hero Section (Professional Centered Layout) -->
+    <header id="hero" class="hero-section">
+        <div class="hero-text">
+            <span class="greeting">HELLO, WELCOME TO MY PAGE</span>
+            <h1>Aspiring Tech Consultant & IT Project Manager</h1>
+            <p class="hero-description">
+                I have an undergraduate degree in <strong>business</strong> and work full-time in a sales role while pursuing my Master's degree in <strong>Computer Science and Data Analytics</strong>. 
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn btn-primary open-sidebar">Get in Touch</a>
+                <a href="#favorites" class="btn btn-secondary">Explore My Interests</a>
+            </div>
+        </div>
+    </header>
+
+    <hr class="section-divider">
+
+    <!-- Hobbies Section (Automated Slideshow) -->
+    <section id="hobbies" class="hobbies-section">
+        <div class="section-header">
+            <h2>A Little About Me</h2>
+            <p>Outside of my Master's studies and work, here is how I spend my time.</p>
+        </div>
+
+        <div class="slideshow-container">
+            <div class="slide active">
+                <span class="hobby-icon">🎮</span>
+                <h3>Gaming</h3>
+                <p>Relaxing and competing online with friends.</p>
+            </div>
+            <div class="slide">
+                <span class="hobby-icon">🏋️</span>
+                <h3>Gym</h3>
+                <p>Staying active, maintaining discipline, and reaching fitness goals.</p>
+            </div>
+            <div class="slide">
+                <span class="hobby-icon">✈️</span>
+                <h3>Travelling</h3>
+                <p>Exploring new cultures, places, and broadening my perspective.</p>
+            </div>
+        </div>
+    </section>
+
+    <hr class="section-divider">
+
+    <!-- Favorites Section -->
+    <section id="favorites" class="favorites-section">
+        <div class="section-header">
+            <h2>My Favorites</h2>
+            <p>A glimpse into the media I enjoy.</p>
+        </div>
+
+        <div class="favorites-split">
+            <div class="favorites-image-container">
+                <img src="image_359d26.jpg" alt="Game of Thrones scene" class="featured-img">
+            </div>
+            <div class="favorites-text">
+                <h2>Game of Thrones</h2>
+                <p>An epic fantasy series of power, family, and survival. The world-building, political intrigue, and character arcs make it my absolute favorite television show.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar Overlay (dims the background when form is open) -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- Pop-out Feedback Sidebar -->
+    <aside id="feedback-sidebar" class="feedback-sidebar">
+        <div class="sidebar-header">
+            <h2>Get in Touch</h2>
+            <button id="close-sidebar" class="close-btn" title="Close Sidebar">&times;</button>
+        </div>
+        <p class="sidebar-intro">Would you like to discuss tech consulting, project management, or leave website feedback? I would love to hear from you.</p>
+        
+        <form id="contact-form" action="#" method="POST" class="sidebar-form">
+            <div class="form-group">
+                <label for="visitor-name">Name:</label>
+                <input type="text" id="visitor-name" name="visitor_name" placeholder="e.g., Jane Doe" required>
+            </div>
+            <div class="form-group">
+                <label for="visitor-email">Email Address:</label>
+                <input type="email" id="visitor-email" name="visitor_email" placeholder="jane@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="inquiry-type">Reason for Contact:</label>
+                <select id="inquiry-type" name="inquiry_type">
+                    <option value="feedback">Website Feedback</option>
+                    <option value="networking">Professional Networking</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="visitor-message">Message:</label>
+                <textarea id="visitor-message" name="visitor_message" rows="4" placeholder="Type your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Send Message</button>
+            <p id="form-status" aria-live="polite" role="status"></p>
+        </form>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="portfolio-footer">
+        <h3>Thank you for visiting!</h3>
+        <p>Built as part of my Web Technologies Module using HTML & CSS.</p>
+        <div class="footer-links">
+            <a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools Reference</a> | 
+            <a href="https://aosmann23.github.io/4thwebpage/" target="_blank" rel="noopener noreferrer">View Older Web App Iteration</a>
+        </div>
+    </footer>
+
+    <!-- Linking external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
